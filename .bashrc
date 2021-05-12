@@ -9,7 +9,7 @@ source /etc/profile
 
 # export stuff
 export EDITOR="nano"
-export PATH="$HOME/.rbenv/bin:$HOME/.rbenv/plugins/ruby-build/bin:$HOME/.yarn/bin:$HOME/.local/bin:$PATH"
+export PATH="$HOME/.rbenv/bin:$HOME/.rbenv/plugins/ruby-build/bin:$HOME/.yarn/bin:$HOME/.local/bin:/usr/local/go/bin:$PATH"
 export GPG_TTY=$(tty)
 
 # init rbenv
@@ -18,6 +18,7 @@ eval "$(rbenv init -)"
 # aliases
 alias anidump='pg_dump -U robert anikuto_development > anikuto_devel_$(date +"%Y%m%d%H%M%S").sql'
 alias config='/usr/bin/git --git-dir=/home/robert/.cfg/ --work-tree=/home/robert'
+alias sail='bash vendor/bin/sail'
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
